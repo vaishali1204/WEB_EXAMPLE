@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ itinerary['destination'] }} Details</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>{{ itinerary['destination'] }} Details</h1>
+    <div class="itinerary-details">
+        <img src="{{ url_for('static', filename='images/' + itinerary['image']) }}" alt="{{ itinerary['destination'] }}">
+        <p>{{ itinerary['description'] }}</p>
+        <!-- Add more details if needed -->
+    </div>
+</body>
+</html>

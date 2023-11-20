@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: pink; /* Background color set to pink */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.itinerary-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.itinerary-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.itinerary-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.itinerary-card h3 {
+    margin: 10px 0;
+    color: #007bff;
+}
+
+.itinerary-card p {
+    color: #555;
+}
+
+.itinerary-card a {
+    display: block;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.itinerary-card a:hover {
+    color: #0056b3;
+}
