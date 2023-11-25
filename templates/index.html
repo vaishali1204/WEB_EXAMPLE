@@ -1,20 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Itineraries</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Your Travel Planner</title>
 </head>
 <body>
-    <h1>Itineraries</h1>
-    <div class="itinerary-cards">
-        {% for itinerary in itineraries %}
-            <div class="itinerary-card">
-                <img src="{{ url_for('static', filename='images/' + itinerary['image']) }}" alt="{{ itinerary['destination'] }}">
-                <h3>{{ itinerary['destination'] }}</h3>
-                <p>{{ itinerary['description'] }}</p>
-                <a href="{{ url_for('itinerary_details', destination=itinerary['destination']) }}">View Details</a>
-            </div>
-        {% endfor %}
-    </div>
+
+    <header>
+        <div class="container">
+            <h1>Your Travel Planner</h1>
+            <p>Plan Your Perfect Trip</p>
+        </div>
+    </header>
+
+    <section id="travel-form">
+        <div class="container">
+            <h2>Plan Your Trip</h2>
+            <form id="trip-form">
+                <label for="budget">Budget (Rs):</label>
+                <input type="number" id="budget" name="budget" required>
+
+                <label for="time">Time (days):</label>
+                <input type="number" id="time" name="time" required>
+
+                <button type="submit">Generate Itinerary</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="generated-itinerary">
+        <div class="container">
+            <h2>Generated Itinerary</h2>
+            <!-- The generated itinerary content will be displayed here -->
+            <div id="itinerary-content" class="itinerary-cards"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Your Name - Your Travel Planner</p>
+        </div>
+    </footer>
+
 </body>
 </html>
