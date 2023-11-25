@@ -1,56 +1,85 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: pink; /* Background color set to pink */
+    font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+    background-image: url('/Users/vaishaliverma/Desktop/WEB_EXAMPLE/static/images/istockphoto-1287303049-1024x1024.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-h1 {
+header {
+    background-color: #333;
+    color: #fff;
     text-align: center;
+    padding: 40px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 8em;
+    line-height: 1.2; /* Add line-height for better vertical alignment */
+}
+
+header p {
+    font-size: 7em;
+}
+
+section {
+    padding: 40px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
     color: #333;
+    font-size: 9em;
+    text-align: center; /* Center the h2 element */
 }
 
-.itinerary-cards {
+form {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-.itinerary-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 300px;
-    padding: 10px;
-    background-color: #fff;
-}
-
-.itinerary-card img {
+label, input {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    max-width: 300px;
+    font-size: 8em;
 }
 
-.itinerary-card h3 {
-    margin: 10px 0;
-    color: #007bff;
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 9em;
 }
 
-.itinerary-card p {
-    color: #555;
+button:hover {
+    background-color: #555;
 }
 
-.itinerary-card a {
-    display: block;
-    text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
+#generated-itinerary {
+    display: none;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    margin-top: 10px;
-}
-
-.itinerary-card a:hover {
-    color: #0056b3;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 8em;
 }
